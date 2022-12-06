@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="addingQuestion/" method="post">
+{% csrf_token %}
+<div class = "d-flex bg-primary text-white justify-content-center p-2">
+    <div class = "form-group row">
+        <label for="inputquestion" class = "m-2">Ask Me Anything!</label>
+        <textarea name="question" required class="form-control form-control-lg m-2 p-2" id="inputquestion" placeholder="anything you want"></textarea>
+        <button type="submit" class="btn btn-success m-2" value="Submit">Submit Question</button>
+    </div>
+</div>
+</form>
+{%endblock%}
